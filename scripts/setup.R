@@ -1,7 +1,7 @@
 
 # Install R packages for this workshop ------------------------------------
 
-install.packages(c("tidyverse", "reticulate"))
+install.packages(c("tidyverse", "reticulate", "patchwork", "cli", "glue", "yardstick"))
 remotes::install_github("TengMCing/scrubwren")
 
 
