@@ -84,6 +84,8 @@ x^2
 t(x) %*% x
 np$sum(x)
 
+# For more tensor operations, please see https://docs.pytorch.org/docs/stable/tensors.html
+
 # Array metadata
 x$shape   # Dimensions
 x$dtype   # Data type
