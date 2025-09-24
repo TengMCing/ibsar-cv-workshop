@@ -37,37 +37,3 @@ list(x_test = x_test,
      y_test = y_test) |>
   saveRDS(here::here("data/cat0_and_dog1_test.rds"))
 
-
-# 
-# 
-# x_train_array <- x_train |> py_to_r()
-# 
-# first_channel <- x_train_array[3, , , 1]
-# second_channel <- x_train_array[3, , , 2]
-# third_channel <- x_train_array[3, , , 3]
-# 
-# process_channel <- function(x, channel_name) {
-#   x |>
-#     as.data.frame() |>
-#     mutate(height = 1:32) |>
-#     pivot_longer(V1:V32) |>
-#     mutate(name = gsub("V", "", name)) |>
-#     mutate(name = as.integer(name)) |>
-#     rename(width = name) |>
-#     mutate(channel = channel_name)
-# }
-# 
-# bind_rows(process_channel(first_channel, "R"),
-#           process_channel(second_channel, "G"),
-#           process_channel(third_channel, "B")) |>
-#   group_by(height, width) |>
-#   summarise(color = rgb(value[channel == "R"], 
-#                         value[channel == "G"], 
-#                         value[channel == "B"], 
-#                         maxColorValue = 255)) |>
-#   ggplot() +
-#   geom_tile(aes(width, height, fill = color)) +
-#   scale_y_reverse(expand = c(0,0)) +
-#   scale_x_continuous(position = "top", expand = c(0,0)) +
-#   scale_fill_identity() +
-#   coord_fixed()
