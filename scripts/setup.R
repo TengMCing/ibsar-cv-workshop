@@ -1,7 +1,8 @@
 
 # Install R packages for this workshop ------------------------------------
 
-install.packages(c("tidyverse", "reticulate", "patchwork", "cli", "glue", "yardstick"))
+install.packages(c("tidyverse", "reticulate", "patchwork", 
+                   "cli", "glue", "yardstick", "randomForest"))
 remotes::install_github("TengMCing/scrubwren")
 
 
@@ -29,4 +30,5 @@ reticulate::conda_create("ibsar-cv-workshop",
 # Install libraries
 reticulate::conda_install("ibsar-cv-workshop",
                           pip = TRUE,
-                          packages = c("torch", "torchvision", "torchaudio", "keras"))
+                          packages = c("torch", "torchvision", 
+                                       "torchaudio", "keras"))
