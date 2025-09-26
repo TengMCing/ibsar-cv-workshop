@@ -2,7 +2,8 @@
 # Install R packages for this workshop ------------------------------------
 
 install.packages(c("tidyverse", "reticulate", "patchwork", 
-                   "cli", "glue", "yardstick", "randomForest"))
+                   "cli", "glue", "yardstick", "randomForest",
+                   "plotly"))
 remotes::install_github("TengMCing/scrubwren")
 
 
