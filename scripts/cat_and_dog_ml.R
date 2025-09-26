@@ -39,7 +39,7 @@ map(1:12, function(i) {
 # representing pixel values across all channels and positions.
 
 x <- cat_and_dog$x_train
-dim(x) <- c(dim(cat_and_dog$x_train)[1], prod(dim(cat_and_dog$x_train)[2:4]))
+dim(x) <- c(dim(x)[1], prod(dim(x)[2:4]))
 
 # This gives a matrix with 10,000 rows and 3,072 columns.
 # Each pixel value across the three channels is treated as a feature.
@@ -130,7 +130,7 @@ yardstick::conf_mat(y, rf_class, data = train_pred)
 
 cat_and_dog_test <- readRDS(here::here("data/cat0_and_dog1_test.rds"))
 x <- cat_and_dog_test$x_test
-dim(x) <- c(dim(cat_and_dog_test$x_test)[1], prod(dim(cat_and_dog_test$x_test)[2:4]))
+dim(x) <- c(dim(x)[1], prod(dim(x)[2:4]))
 x <- as.data.frame(x)
 x_100 <- predict(train_pca, x)[, 1:100] |> as.data.frame()
 test_data <- mutate(x_100, y = factor(cat_and_dog_test$y_test))
@@ -151,7 +151,8 @@ test_pred <- data.frame(y = factor(test_data$y),
 test_pred |>
   pivot_longer(glm_class:rf_class) |>
   group_by(name) |>
-  yardstick::accuracy(y, value)
+  yardstick::accuracy(y, value) |>
+  arrange(desc(.estimate))
 
 # ROC curves tell the same story:
 # for vision tasks, traditional linear or inflexible models cannot
