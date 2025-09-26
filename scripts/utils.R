@@ -62,3 +62,26 @@ plot_rgb <- function(x, title = NULL, axis = TRUE) {
   
   return(p)
 }
+
+process_history <- function(history, model_name = "") {
+  reticulate::py_to_r(history$history) |>
+    as.data.frame() |>
+    dplyr::mutate(epoch = 1:n()) |>
+    tidyr::pivot_longer(-epoch) |>
+    dplyr::mutate(set = ifelse(grepl("val", name), "Validation", "Train")) |>
+    dplyr::mutate(metric = gsub("val_", "", name)) |>
+    dplyr::mutate(model = model_name)
+}
+
+plot_total_history <- function(total_history) {
+  total_history <- purrr::map_df(names(total_history), function(model_name) {
+    total_history[[model_name]] |>
+      dplyr::mutate(model = model_name)
+  })
+  
+  total_history |>
+    ggplot2::ggplot(ggplot2::aes(epoch, value, col = set)) +
+    ggplot2::geom_line() +
+    ggplot2::facet_grid(metric ~ model, scales = "free") +
+    ggplot2::theme(legend.position = "bottom")
+}
