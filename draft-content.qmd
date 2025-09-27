@@ -1,0 +1,165 @@
+---
+title: "Computer Vision Workshop Plan"
+format: html
+---
+
+# Workshop Plan Overview
+
+Need to consider which parts the audience can work together on, and which tasks should be assigned individually.
+
+---
+
+## 1. Introduce Myself
+- **Education background**
+  - Bachelor, Honours, and PhD in EBS, Monash University
+- **Current position**
+  - COSM, BDSI, ANU -> CBE, RSFAS, ANU
+- **Experience in computer vision and deep learning**
+  - **Residual reading**
+    - Train CV models to predict visual signal strength of residual plots
+    - Test model assumptions using model predictions
+  - **Food safety**
+    - Object detection from videos (e.g., water tanks, washing points)
+    - Collect food safety answers from officers and online subjects
+    - Train VLLMs based on collected answers
+
+---
+
+## 2. Content Summary
+- List topics to be covered
+- Declare the scope and focus of the workshop
+- Encourage audience: don’t be intimidated by deep learning jargon — statistical terms can often redefine them
+
+---
+
+## 3. What is Computer Vision (CV)
+- Broad definition and narrow definition of CV, emphasizing today's focus
+- Applications: early 1980s image processing → today’s image and video generation
+- Relationship with statistics, machine learning, and AI
+
+---
+
+## 4. Existing CV Landscape
+- Brief overview of frameworks: TensorFlow, PyTorch, JAX, etc.
+- Rapidly evolving field: history of framework dynamics
+- Master one first — skills are transferable
+- Why Python? Why R?
+
+---
+
+## 5. Reticulate Basics
+- Setting up Python environment (virtualenv/conda)
+- Conversion of objects between R and Python
+- Import Python modules in R
+- Call Python methods/functions from R
+- Indexing Python objects
+
+---
+
+## 6. Torch / NumPy Basics
+- Conversion between arrays and tensors
+- Array/tensor slicing
+- Basic arithmetic operations
+- Data type, device type, and shape
+
+---
+
+## 7. Image Data Format
+- What is the format of an image dataset
+- Different ways to represent an image
+- Example: Cat and Dog dataset
+- Visualizing images in R
+
+---
+
+## 8. Image Classification
+
+### Why Start with Classification
+- Introduces core concepts of CV
+- Provides a foundation for more complex tasks (detection, segmentation, generation)
+
+### 8.1 Traditional Methods
+- Feature extraction via PCA
+- Try GLM, LDA, QDA, Random Forest, etc.
+- Summarize why these methods have limitations for images
+
+### 8.2 Neural Networks for Classification
+- What is a neural network: components and brief history
+- Parameter updates: gradient descent and backpropagation (brief math)
+- Introduce Keras syntax and try a basic NN
+- Add dropout and retry
+- Increase number of hidden units and retry
+- Increase number of hidden layers and retry
+- Try PCA-based NN
+- Final comparison: advantages and limitations of vanilla NN
+
+### 8.3 CNNs for Classification
+- What is a CNN
+- Convolutional layers: definition and purpose
+- Pooling layers: definition and purpose
+- Try a minimal CNN: show strong performance with a bare minimum model
+- Introduce deeper blocks and discuss performance impact
+- Regularization: where to place dropout, use of batch normalization, and effect on overfitting
+- CNN block design: build a model good enough for the task
+- Image augmentation
+  - Why it works
+  - When it works / doesn’t work
+  - Manual vs. automatic; static vs. dynamic
+- Transfer learning
+  - Why it works
+  - Different strategies
+  - When to use it and expected performance gain
+
+### 8.4 CNN Architectures
+- Context: CV competitions (ILSVRC, ICLR) and the evolution of the field
+- Key architectures and characteristics:
+  - AlexNet
+  - VGG16/19
+  - GoogLeNet / Inception
+  - ResNet
+  - DenseNet
+  - EfficientNet
+  - MobileNet
+  - ConvNeXt
+  - Others
+
+### 8.5 Other Techniques in Image Classification
+- **Ensemble methods**
+  - Combine multiple models to improve accuracy and reduce variance/bias
+  - Stacking with neural networks
+  - Widely used in competitions (e.g., Kaggle)
+- **Self-supervised learning**
+  - Learn image representations without labels (e.g., masked image modeling)
+  - Fine-tune on labeled data for classification
+  - Effective when labeled datasets are small
+- **Multimodal models**
+  - Matching models (e.g., CLIP-style): align image and text embeddings; classify new images using existing or descriptive labels
+  - Fusion classifiers: combine image with other data types (metadata, sensors) for improved classification
+- **Model efficiency tricks**
+  - Mobile-friendly networks (EfficientNet, MobileNet) reduce computation and memory for edge deployment
+- **Model compression**
+  - Pruning: remove low-importance weights
+  - Quantization: reduce numerical precision of weights
+  - Knowledge distillation
+    - Teacher–student models: large teacher guides smaller student using soft predictions or intermediate features
+
+### 8.6 Vision Transformers (ViT)
+- **Motivation**
+  - Adapt transformers from NLP to images
+  - Treat image as a sequence of patches instead of pixels
+- **Core Idea**
+  - Patch embedding: split image into fixed-size patches, flatten, project to sequence of embeddings
+  - Positional embedding: maintain spatial information
+  - Transformer encoder: multi-head self-attention captures global relationships
+  - Classification token ([CLS]): final embedding fed into a classifier
+- **Advantages**
+  - Captures global context
+  - Performs well on very large datasets
+- **Limitations**
+  - Requires large datasets or pretrained models
+  - Computationally intensive
+- **Ready-to-use ViTs**
+  - DeiT
+  - Swin Transformer
+  - Others
+
