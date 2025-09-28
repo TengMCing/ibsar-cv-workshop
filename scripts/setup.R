@@ -32,4 +32,7 @@ reticulate::conda_create("ibsar-cv-workshop",
 reticulate::conda_install("ibsar-cv-workshop",
                           pip = TRUE,
                           packages = c("torch", "torchvision", 
-                                       "torchaudio", "keras"))
+                                       "torchaudio", "keras",
+                                       "keras-tuner", "grpcio",
+                                       "protobuf", "six",
+                                       "scipy", "scikit-learn"))
