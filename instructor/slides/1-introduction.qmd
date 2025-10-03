@@ -10,6 +10,7 @@ format:
     footer: "Slides URL: <https://ibsar-cv-workshop.patrickli.org/> | Canberra time <span id = 'mel-local-time'></span>"
     logo: slide_figures/ANU_Primary_Horizontal_GoldBlack.png
     self-contained: false
+    controls: true
     include-in-header: 
       - file: slides.js
     filters:
