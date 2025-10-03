@@ -9,7 +9,7 @@ format:
     theme: default
     footer: "Slides URL: <https://ibsar-cv-workshop.patrickli.org/> | Canberra time <span id = 'mel-local-time'></span>"
     logo: slide_figures/ANU_Primary_Horizontal_GoldBlack.png
-    self-contained: true
+    self-contained: false
     include-in-header: 
       - file: slides.js
     filters:
@@ -126,3 +126,62 @@ There will be some new concepts and terminology, but nearly everything can be ex
 - ...
 
 :::
+
+---
+
+## Early CV applications (before 1980s)
+
+::: {.text-70}
+
+Early CV applications realied heavily on **geometric reasoning**, **algebraic formulations**, and **handcrafted rules**.
+
+:::
+
+::: {.text-55 .height-70}
+
+::: {.flex-columns .height-100}
+
+::: {.flex-1 .flex-rows}
+
+Edge and line detection, Sobel operator (1968)
+
+::: {.flex-1-image}
+
+![](slide_figures/valve_sobel.png)
+:::
+
+Digit recognition, N-tuple method (1959)
+
+::: {.flex-1-image}
+
+![](slide_figures/n-tuple.png)
+
+:::
+
+:::
+
+::: {.flex-1 .flex-rows}
+
+Image segmentation, recursive region splitting (1978)
+
+::: {.flex-1-image}
+
+![](slide_figures/recursive-region-splitting.png)
+
+:::
+
+Image classification, texture analysis (1973)
+
+::: {.flex-1-image}
+
+![](slide_figures/texture-feature.png)
+
+:::
+
+:::
+
+:::
+
+:::
+
+
