@@ -83,16 +83,46 @@ Don’t be surprised if your results differ from those shown in the materials.
 
 ## Expectation
 
+<br>
+
 **How confident should I be coming into this workshop?**
 
 . . .
 
-You are good to go! 
+<br>
+
+::: {.text-90}
+
+If you have a statistics background, you are good to go! 
 
 There will be some new concepts and terminology, but nearly everything can be explained in statistical terms. Don’t be intimidated by CV jargon.
+
+:::
 
 ---
 
 ## Overview of computer vision {.transition-slide}
 
 ---
+
+## Computer vision
+
+
+::: {.callout-note appearance="minimal"}
+
+## Computer vision is a broad field concerned with enabling machines to interpret and understand visual information from the world. 
+
+:::
+
+::: {.text-70}
+
+
+- **Image classification**: Assign a single label to an entire image.
+- **Object detection**: Locate and classify multiple objects within an image using bounding boxes.
+- **Image segmentation**: Label each pixel with a class, producing a detailed mask of objects.
+- Image generation: Create realistic or artistic images from scratch or from a condition.
+- Action recognition: Identify actions or activities in images or video sequences.
+- Visual Question Answering: Answer questions about an image by understanding its content.
+- ...
+
+:::
