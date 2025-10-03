@@ -1,0 +1,98 @@
+---
+format: 
+  revealjs:
+    transition-speed: fast
+    slide-number: c/t
+    css: slides.css
+    transition: fade
+    incremental: false 
+    theme: default
+    footer: "Slides URL: <https://ibsar-cv-workshop.patrickli.org/> | Canberra time <span id = 'mel-local-time'></span>"
+    logo: slide_figures/ANU_Primary_Horizontal_GoldBlack.png
+    self-contained: true
+    include-in-header: 
+      - file: slides.js
+    filters:
+      - slides.lua
+date: "`r Sys.Date()`"
+---
+
+## Deep Learning and Computer Vision in R: A Practical Introduction {.title-slide-title}
+
+::: {.title-slide-event}
+
+BIBC2025 workshop
+
+:::
+
+#### Patrick Li {.title-slide-author}
+
+::: {.title-slide-org}
+
+RSFAS, ANU
+
+:::
+
+---
+
+## About me
+
+I am Patrick Li
+
+- Education background
+- Current work
+- Past experience in CV
+
+---
+
+## Content summary
+
+- **Overview of computer vision (CV)**
+- `reticulate` basics
+- Neural networks
+- Image classification
+- Hyperparameter tuning
+- CV model interpretation
+- Object detection
+- Image segmentation
+
+---
+
+## Disclaimer
+
+::: {.callout-note}
+
+## Code and theory
+
+This workshop is a hands-on introduction to modern computer vision in R.
+You’ll work through code examples and practical exercises.
+Theory will be covered only to the extent needed to understand the key ideas and statistical foundations behind the models.
+
+:::
+
+::: {.callout-warning}
+
+## Reproducibility
+
+Computer vision models can be only partly reproducible due to GPU computation.
+Don’t be surprised if your results differ from those shown in the materials.
+
+:::
+
+---
+
+## Expectation
+
+**How confident should I be coming into this workshop?**
+
+. . .
+
+You are good to go! 
+
+There will be some new concepts and terminology, but nearly everything can be explained in statistical terms. Don’t be intimidated by CV jargon.
+
+---
+
+## Overview of computer vision {.transition-slide}
+
+---
