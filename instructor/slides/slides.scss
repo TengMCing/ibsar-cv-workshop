@@ -1,0 +1,311 @@
+/*-- scss:defaults --*/
+$link-color: #be830e;
+
+/*-- scss:rules --*/
+strong {
+  color: var(--r-link-color-hover);
+}
+
+.reveal blockquote {
+    border-left: solid 5px #var(--r-link-color-dark);
+    padding-left: 1em;
+    display: block;
+    margin-inline-start: 2em;
+}
+
+.reveal h2 {
+  color: #BE830E !important;
+}
+
+.reveal .footer a {
+  color: #BE830E;
+}
+
+.rmainfontsize {
+  font-size: var(--r-main-font-size);
+}
+
+body > div.reveal.has-logo.focused.has-horizontal-slides.ready.fade > img {
+  height: 2em;
+  max-height: 100em;
+}
+
+th {
+  background: #eee8d5;
+}
+
+tr:nth-child(even) {
+    background: #eee8d5;
+}
+
+/* Display a PNG file as an icon. Use it as a class of an <img> element. */
+.png-icon {
+  height:1em;
+  width:1em;
+  vertical-align:-0.125em;
+  margin-left:auto;
+  margin-right:auto;
+  font-size:inherit;
+  fill:currentColor;
+  overflow:visible;
+  position:relative;
+  margin-top:0px !important;
+  margin-bottom:0px !important;
+}
+
+/* Cancel the bold color. */
+.callout-title strong {
+  color: black;
+}
+
+.title-slide-title {
+  text-align: right;
+}
+
+.title-slide-event {
+  color: #5A5A5A;
+}
+
+.title-slide-author {
+  margin-top: 1em !important; 
+  font-size: 0.9em !important;
+}
+
+.title-slide-org p{
+  font-size: 0.9em;
+}
+
+.transition-slide {
+  background-color: #F5EDDE!important;
+  font-size: 120%;
+  text-align: center
+}
+
+.text-150 {
+  font-size: 150%;
+}
+
+.text-120 {
+  font-size: 120%;
+}
+
+.text-100 {
+  font-size: 100%;
+}
+
+.text-90 {
+  font-size: 90%;
+}
+
+.text-80 {
+  font-size: 80%;
+}
+
+.text-75 {
+  font-size: 75%;
+}
+
+.text-70 {
+  font-size: 70%;
+}
+
+.text-65 {
+  font-size: 65%;
+}
+
+.text-60 {
+  font-size: 60%;
+}
+
+.text-55 {
+  font-size: 55%;
+}
+
+.text-50 {
+  font-size: 50%;
+}
+
+.text-45 {
+  font-size: 45%;
+}
+
+.text-40 {
+  font-size: 40%;
+}
+
+.height-100 {
+  height: 100%;
+}
+
+.height-80 {
+  height: 80%;
+}
+
+.height-70 {
+  height: 70%;
+}
+
+.height-60 {
+  height: 60%;
+}
+
+.height-50 {
+  height: 50%;
+}
+
+.height-40 {
+  height: 40%;
+}
+
+.width-100 {
+  width: 100%;
+}
+
+.width-50 {
+  width: 50%;
+}
+
+.flex-rows {
+  display: flex; 
+  flex-direction: column;
+  text-align: center;
+}
+
+.flex-columns {
+  display: flex; 
+  flex-direction: row;
+  text-align: center;
+}
+
+.flex-1 {
+  display: flex;
+  flex: 1 1 0;
+}
+
+.flex-1-image {
+  display: flex;
+  flex: 1 1 0;
+  min-height: 0;
+  min-width: 0;
+  justify-content: center;
+}
+
+.center-div {
+  width: 100%;
+  text-align: center;
+}
+
+form.oi-3a86ea>label {
+  flex-shrink: 1 !important;
+}
+
+form.oi-3a86ea {
+  width: 100% !important;
+}
+
+.white-background-plot {
+  background-color: white;
+}
+
+img.slide-logo{
+  height: 1.5em !important;
+}
+
+p.caption {
+  font-size: 0.5em !important;
+}
+
+#fig-cat {
+  margin-left: 0;
+}
+
+
+
+#exponential-family > div.text-75 > div > div:nth-child(1) > div:nth-child(2) {
+  display: block;
+}
+
+/*
+| Attribute         |                                     Effect | Example value(s)                        | Default / Notes                               |
+| ----------------- | -----------------------------------------: | --------------------------------------- | --------------------------------------------- |
+| `popup-content`   |               Inline tooltip text (simple) | `"A short explanation"`                 | Use as fallback if `.popup-content` absent    |
+| `.popup-content`  | Rich HTML/Markdown content for the tooltip | Block element containing markdown       | If present, used instead of `popup` attribute |
+| `popup-dir`       |       Tooltip direction relative to parent | `top` / `bottom` / `left` / `right`     | Default: `top`                                |
+| `popup-align`     |                 Alignment for top tooltips | `start` (left), `end` (right), `center` | Default: `start` (top-left)                   |
+| `popup-position`  |                  Outside or inside the div | `outer`, `inner`                        | Default: `outer`                              |
+| `popup-bg`        |                   Tooltip background color | `#002b36`, `rgba(0,0,0,0.85)`           | Applied as `background-color`                 |
+| `popup-color`     |                         Tooltip text color | `#fdf6e3`, `white`                      | Applied as `color`                            |
+| `popup-font-size` |                          Tooltip font size | `14px`, `1rem`                          | Applied as `font-size`                        |
+| `popup-width`     |                          Tooltip max width | `250px`, `20em`                         | Applied as `max-width`                        |
+| `popup-radius`    |                      Tooltip border radius | `6px`, `0.5rem`                         | Applied as `border-radius`                    |
+| `popup-padding`   |                      Tooltip inner padding | `8px`, `6px 10px`                       | Applied as `padding`                          |
+| `popup-opacity`   |                      Tooltip opacity (0–1) | `0.85`, `1`                             | Applied as `opacity`                          |
+| `popup-border`    |                             Tooltip border | `1px solid #ccc`                        | Applied as `border`                           |
+| `popup-z`         |                            Tooltip z-index | `9999`                                  | Applied as `z-index`                          |
+| `popup-wrap`      |                      Text wrapping control | `normal`, `nowrap`, `pre`               | Applied as `white-space`                      |
+*/
+
+.popup {
+  position: relative;
+}
+
+.popup-box {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.18s ease;
+  background-color: #fff;
+  color: #333;
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  max-width: 250px;
+  z-index: 999;
+  white-space: normal;
+  box-sizing: border-box;
+}
+
+.popup:hover .popup-box {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* ul */
+/* Professional Academic Style - Just changing bullet appearance */
+.reveal ul {
+  list-style-type: disc;
+}
+
+.reveal ul li::marker {
+  color: #2c5aa0;
+}
+
+/* Nested lists */
+.reveal ul ul li::marker {
+  color: #5b7db1;
+}
+
+.reveal ul ul ul li::marker {
+  color: #8499b8;
+}
+
+/* Alternative: Square bullets */
+.reveal ul.square {
+  list-style-type: square;
+}
+
+/* Alternative: Circle bullets */
+.reveal ul.circle {
+  list-style-type: circle;
+}
+
+/* png icon */
+.png-icon {
+  width: 1em;              /* set desired width */
+  height: auto;            /* automatically scale height */
+  vertical-align: middle;  /* center with text */
+  font-size: inherit;
+  fill: currentColor;
+  display: inline-block;
+}
